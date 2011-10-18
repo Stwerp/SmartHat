@@ -1,0 +1,13 @@
+Descriptions
+-------------
+This is for the first tag. Crossed Dipole, using the HSMS2852 diode pairs, 3 stages.
+
+
+Beeper2.5khz.c --> This is the best code to use.
+Beeper250khz.c --> Not sure about the rest of these.
+LoPower2.5khz.c
+LoPower250khz.c
+LoPower5khz.c
+QAM_Testing.c
+SendData250Khz.c
+WDogSignal_Skel.c

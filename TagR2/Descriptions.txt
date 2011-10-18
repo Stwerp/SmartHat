@@ -1,0 +1,13 @@
+Descriptions
+---------------
+This is for the Single Dipole run tag. First tag with the HSMS285P diodes, 4 stages.
+
+Beeper2.5khz.c --> Still the winner for use on the boards.
+Beeper250khz.c
+DataDemodulator.c
+FullOnbeep.c --> Does not pulse, constant beep
+IQTransmit.c --> Initial testing
+QAM_Testint.c --> Not working
+SemiActiveBeep.c
+SemiActiveBeep_COMP.c
+SleepOnly.c

@@ -1,0 +1,11 @@
+Descriptions
+-------------
+Small QAM Board for demoing QAM backscatter
+
+BinaryModDemo.c --> Beeps and transmits random I-or-Q data (Only transmits binary data). Useful for demoing backscatter comms.
+Demodulation.c --> Used to test demodulation circuit.
+BERIQTransmitTesting.c --> Set I and Q strings are transmitted as IQ, QPSK/4QAM data. Known strings are then compared in matlab/java to determine BER of channel.
+IQTransmitTag2.c
+All4States.c
+IQTransmitTag3.c
+TestCode.c

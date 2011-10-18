@@ -1,0 +1,8 @@
+Descriptions
+-------------
+Newest SmartHAT board. Should be (nearly) final design. Back to Crossed Dipole design.
+
+BeepOnly.c --> Tried and true beep program
+LoPowerBeepTest.c --> New, 32kHz crystal based beeping
+SmartHatDefintions.h --> Header file for board.
+TestCode1.c 
