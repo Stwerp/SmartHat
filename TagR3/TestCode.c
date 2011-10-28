@@ -1,7 +1,7 @@
 //******************************************************************************
 // MSP430F2011 Program
 //
-// 2.5 kHz Generator
+// 16 QAM Code
 //
 //  The program sleeps for 900 ms in LPM3 mode, then wakes up and outputs
 //  a 2.5 kHz square wave tone on P1OUT.0 for 100 ms
@@ -14,6 +14,9 @@
 unsigned short position;  // 2 bytes = 16 bits
 unsigned long data;       // 4 bytes = 32 bits
 */
+
+unsigned char Data;
+const unsigned char MASK = 0x0F;
 
 void main(void)
 {
@@ -75,6 +78,19 @@ void main(void)
      __delay_cycles(1);
    }
   
+   BCSCTL1 = CALBC1_16MHZ;                    // Set range
+   DCOCTL = CALDCO_16MHZ;                     // Set DCO step + modulation */
+   //16-QAM Testing
+   Data = 0;
+   while(1)
+   {
+     //P1OUT = Data++;
+     P1OUT = (MASK & Data++);
+     //__delay_cycles(5);
+   }
+   
+   
+   /*
    // -- Toggle A0 / (LT5505 Input pin) -- //
    //P1OUT ^= 0x01;
    
@@ -96,6 +112,7 @@ void main(void)
    
    // -- Toggle LED 3 (Yellow)-- //
    P1OUT ^= 0x40;
+   */
    
    // Sleep  LONG ms
    // Initialize timerA0
@@ -126,3 +143,4 @@ __interrupt void Timer_A0 (void)
   // Turn CPU on
   _BIC_SR_IRQ(LPM3_bits + GIE);
 }
+
